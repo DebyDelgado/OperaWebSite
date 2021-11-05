@@ -54,6 +54,78 @@ namespace OpenWebSite.Controllers
             }
             return View("Create", opera);
         }
+        //GET
+        //Opera/Detail/id
+        //Opera/Detail/2
+        public ActionResult Detail(int id)
+        {
+
+            Opera opera = context.Operas.Find(id);
+            if (opera != null) { 
+                return View("Detail", opera);
+            }
+            else
+            {
+                return HttpNotFound();
+
+            }
+        }
+
+        //GET /OPERA/DELETE/ID
+        public ActionResult Delete(int id)
+        {
+            Opera opera = context.Operas.Find(id);
+            if (opera != null)
+            {
+                return View("Delete", opera);
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+
+        }
+        // /OPERA/DELETE
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Opera opera = context.Operas.Find(id);
+
+            context.Operas.Remove(opera);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
+
+        //GET /OPERA /EDIT
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Opera opera = context.Operas.Find(id);
+            if (opera != null)
+            {
+                return View("Edit", opera);
+
+            }
+            else
+                return HttpNotFound();
+
+        }
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult EditConfirmed(Opera opera)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(opera).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View("Edit", opera);
+        }
 
     }
 }

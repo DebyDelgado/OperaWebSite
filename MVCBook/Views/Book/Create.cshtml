@@ -1,0 +1,60 @@
+﻿@model MVCBook.Models.Book
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm("Create", "Book", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(model => model.Name)
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Author)
+            @Html.EditorFor(model => model.Author)
+            @Html.ValidationMessageFor(model => model.Author)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.PagesNumber)
+            @Html.EditorFor(model => model.PagesNumber)
+            @Html.ValidationMessageFor(model => model.PagesNumber)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Publisher)
+            @Html.EditorFor(model => model.Publisher)
+            @Html.ValidationMessageFor(model => model.Publisher)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.PublicationDate)
+            @Html.EditorFor(model => model.PublicationDate)
+            @Html.ValidationMessageFor(model => model.PublicationDate)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Content)
+            @Html.EditorFor(model => model.Content)
+            @Html.ValidationMessageFor(model => model.Content)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Price)
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.PriceConfirm)
+            @Html.EditorFor(model => model.PriceConfirm)
+            @Html.ValidationMessageFor(model => model.PriceConfirm)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    }
+    @Html.ActionLink("Back to List", "Index", "Book")
+
+</body>
+</html>

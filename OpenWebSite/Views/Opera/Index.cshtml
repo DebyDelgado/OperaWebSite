@@ -10,19 +10,23 @@
     <p>@Html.ActionLink("Create New","Create", "Opera")</p>
     <table>
         <tr>
-            <th>@Html.DisplayNameFor(model=> model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
             <th>@Html.DisplayNameFor(model => model.Composer)</th>
             <th>@Html.DisplayNameFor(model => model.Year)</th>
-            <th></th>
-
+            <th>Details</th>
+            <th>Deletes</th>
         </tr>
         @foreach (var item in Model)
         {
     <tr>
-        <td>@Html.DisplayFor(modelItem=> item.Title)</td>
+        <td>@Html.DisplayFor(modelItem => item.Title)</td>
         <td>@Html.DisplayFor(modelItem => item.Composer)</td>
         <td>@Html.DisplayFor(modelItem => item.Year)</td>
-        <td>@Html.ActionLink("Detail","Detail", new {id= item.OperaId })</td>
+        <td>@Html.ActionLink("Detail", "Detail", new { id = item.OperaId })</td>
+        
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.OperaId })
+        </td>
 
     </tr>
 

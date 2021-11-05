@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWebSite", "OpenWebSite\OpenWebSite.csproj", "{4AF18E8B-10AA-4F54-B59A-3A2810770B78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCBook", "MVCBook\MVCBook.csproj", "{5AF52C5C-E4DA-4FFF-AC98-FBC148D04D1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4AF18E8B-10AA-4F54-B59A-3A2810770B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AF18E8B-10AA-4F54-B59A-3A2810770B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AF18E8B-10AA-4F54-B59A-3A2810770B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF52C5C-E4DA-4FFF-AC98-FBC148D04D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF52C5C-E4DA-4FFF-AC98-FBC148D04D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF52C5C-E4DA-4FFF-AC98-FBC148D04D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF52C5C-E4DA-4FFF-AC98-FBC148D04D1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

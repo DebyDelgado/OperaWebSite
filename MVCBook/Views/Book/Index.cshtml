@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MVCBook.Models.Book>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>@Html.ActionLink("Create New", "Create", "Book")</p>
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.Author)</th>
+            <th>@Html.DisplayNameFor(model => model.PagesNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.Publisher)</th>
+            <th>@Html.DisplayNameFor(model => model.PublicationDate)</th>
+            <th>@Html.DisplayNameFor(model => model.Content)</th>
+            <th>@Html.DisplayNameFor(model => model.Price)</th>
+            <th>@Html.DisplayNameFor(model => model.PriceConfirm)</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+        <td>@Html.DisplayFor(modelItem => item.Author)</td>
+        <td>@Html.DisplayFor(modelItem => item.PagesNumber)</td>
+        <td>@Html.DisplayFor(modelItem => item.Publisher)</td>
+        <td>@Html.DisplayFor(modelItem => item.PublicationDate)</td>
+        <td>@Html.DisplayFor(modelItem => item.Content)</td>
+        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+        <td>@Html.DisplayFor(modelItem => item.PriceConfirm)</td>
+
+        <td>
+            @Html.ActionLink("Detail", "Detail", new { id = item.Id })
+        </td>
+    </tr>
+        }
+    </table>
+
+</body>
+</html>

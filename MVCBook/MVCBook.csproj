@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4AF18E8B-10AA-4F54-B59A-3A2810770B78}</ProjectGuid>
+    <ProjectGuid>{5AF52C5C-E4DA-4FFF-AC98-FBC148D04D1C}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenWebSite</RootNamespace>
-    <AssemblyName>OpenWebSite</AssemblyName>
+    <RootNamespace>MVCBook</RootNamespace>
+    <AssemblyName>MVCBook</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -99,20 +99,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\OperaController.cs" />
-    <Compile Include="Data\OperaDbContext.cs" />
-    <Compile Include="Data\OperaInitializer.cs" />
+    <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Data\BookDbContext.cs" />
+    <Compile Include="Data\BookInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Opera.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Validations\CheckValidYear.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -121,11 +120,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Views\Opera\Index.cshtml" />
-    <Content Include="Views\Opera\Create.cshtml" />
-    <Content Include="Views\Opera\Detail.cshtml" />
-    <Content Include="Views\Opera\Delete.cshtml" />
-    <Content Include="Views\Opera\Edit.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Book\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,9 +145,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61820</DevelopmentServerPort>
+          <DevelopmentServerPort>51851</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61820/</IISUrl>
+          <IISUrl>http://localhost:51851/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
