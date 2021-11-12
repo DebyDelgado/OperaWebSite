@@ -11,8 +11,20 @@ namespace OpenWebSite
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            //rutas personalizadas siempre arriba del default
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+                name:"Login",
+                url: "{controller}/{action}/{name}/{role}",
+                defaults: new {controller="Test", action="Login"}
+                );
+            //routes.MapRoute(
+              // name: "SearchByTitle",
+              // url: "{controller}/{title}",
+              // defaults: new { controller = "Test", action = "SearchByTitle", title= UrlParameter.Optional }
+              // );
 
+            //ruta default
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
