@@ -6,9 +6,12 @@ using System.Web.Mvc;
 using OpenWebSite.Models;
 using OpenWebSite.Data;
 using System.Data.Entity;
+using System.Diagnostics;
+using OpenWebSite.Filters; //agregar para usar MyFilterAction
 
 namespace OpenWebSite.Controllers
 {
+    [MyFilterAction]
     public class OperaController : Controller
     {
         //Crear instancia del dbcontext
@@ -126,6 +129,22 @@ namespace OpenWebSite.Controllers
             }
             return View("Edit", opera);
         }
-
+        //filtro de acción -  ANTES
+      //  protected override void OnActionExecuting(ActionExecutingContext filterContext)
+       // {
+            //controller/action
+            //{controller}/{action}
+            //opera/create
+         //   var controller = filterContext.RouteData.Values["controller"];
+         //   var action = filterContext.RouteData.Values["action"];
+         //   Debug.WriteLine("Controller: " + controller + "Action: " + action + "Paso por OnActionExecuting");
+     //   }
+        //filtro de acción -  DESPUES
+      //  protected override void OnActionExecuted(ActionExecutedContext filterContext)
+      //  {
+        //    var controller = filterContext.RouteData.Values["controller"];
+       //     var action = filterContext.RouteData.Values["action"];
+       //     Debug.WriteLine("Controller: " + controller + "Action: " + action + "Paso por OnActionExecuting");
+      //  }
     }
 }

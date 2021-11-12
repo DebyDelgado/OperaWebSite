@@ -1,0 +1,85 @@
+﻿
+
+body {
+    margin: 0px;
+}
+
+#banner {
+    
+    background-color:brown;
+    width: 60%;
+    float: left;
+}
+
+.botonmenu a {
+    text-decoration: none;
+    color: white;
+}
+
+.imgbanner {
+    height: 200px;
+    width: 500px;
+}
+
+.botonmenu {
+    display:inline-block;
+    padding: 10px;
+    height: 20px;
+    text-align: center;
+    width: 100px;
+    background-color: maroon;
+}
+
+    .botonmenu:hover {
+        background-color: orangered;
+    }
+
+#login {
+    height: 200px;
+    width:40%;
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
+
+#derimg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+#menu {
+    height: 50px;
+    background-color: lightgray;
+    color: white;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#izq {
+    background-color:brown;
+    height: 700px;
+    width: 20%;
+    float: left;
+    color: black;
+}
+
+#content {
+    float: left;
+}
+
+#der {
+    background-color: grey;
+    height: 700px;
+    width: 20%;
+    float: right;
+}
+
+#footer {
+    background-color: darkslategray;
+    clear: both;
+    text-align: right;
+    height: 100px;
+}

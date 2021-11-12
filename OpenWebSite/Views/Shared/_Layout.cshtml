@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="banner">
+        <img class="imgbanner" src="~/Images/teatro1.jpg" />
+    </div>
+    <div id="login">
+        algo
+    </div>
+    <div id="menu">
+        <div class="botonmenu">
+            <a href="#">@Html.ActionLink("Inicio", "Index", "Home")</a>
+        </div>
+        <div class="botonmenu">
+            <a href="#"><p>@Html.ActionLink("Opera", "Index", "Opera")</p></a>
+        </div>
+        <div class="botonmenu">
+            <a href="#">@Html.ActionLink("Empleado", "Index", "Home")</a>
+        </div>
+    </div>
+    <div id="izq">
+        @if (IsSectionDefined("izq"))
+        {
+            @RenderSection("izq")
+        }
+        else
+        {
+            <p>Mail@mail</p>
+            <p>telefono</p>
+        }
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+    <div id="der">
+        @if (IsSectionDefined("der"))
+        {
+            @RenderSection("der")
+        }
+        else
+        {
+            <img id="derimg" src="~/Images/exterior1.jpg" />
+            <img id="derimg" src="~/Images/exterior2.jpg" />
+            <img id="derimg" src="~/Images/exterior3.jpg" />
+        }
+    </div>
+    <div id="footer">
+        <p> teatro@info.com </p>
+    </div>
+</body>
+</html>
